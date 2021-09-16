@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonButtons, IonCol, IonContent, IonHeader, IonMenuButton, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import { useParams } from 'react-router';
 import ExploreContainer from '../components/ExploreContainer';
 import './Page.css';
@@ -24,7 +24,12 @@ const Page: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+
+        <IonRow className="ion-justify-content-center ion-text-center">
+          <IonCol size="8">
+            <IonButton routerLink="/page2" routerDirection="forward">Navigate to Page 2</IonButton>
+          </IonCol>
+        </IonRow>
       </IonContent>
     </IonPage>
   );
