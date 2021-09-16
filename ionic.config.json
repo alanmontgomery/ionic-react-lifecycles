@@ -1,0 +1,7 @@
+{
+  "name": "ionic-lifecycle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
